@@ -73,8 +73,6 @@ Fraction_Above = []
 start = timeit.default_timer()
 plt.close("all")
 Space_Tag = 0
-I_d = 0.01 #Refinement Threshold
-V_Stop = 0.04
 First_Verif = 1
 
 def norm_u(u):
@@ -160,13 +158,16 @@ State_Space = np.array( [
                 [[2.0,3.0],[3.0,4.0]],
                 [[3.0,3.0],[4.0,4.0]],      
                ] )
-    
+
+#STATE LABELING FOR SPECIFICATION PHI 1
     
 L_mapping = ['', '', '', '',
              '','A','A', '',
              '', '','A','',
              '', '', '', '']
-    
+
+
+#STATE LABELING FOR SPECIFICATION PHI 2
 
 #L_mapping = ['A', '', '', 'B',
 #             '','B','', 'B',
@@ -176,7 +177,7 @@ L_mapping = ['', '', '', '',
 
 #Labeling states in the partitioned State-Space.  # Order is from (0,0) and moving horizontal. "mirror image"
 
-###AUTOMATA REPRESENTING THE SPECIFICATION PHI
+###AUTOMATA REPRESENTING THE SPECIFICATION PHI 1
 
 Automata = [[['A'], [''],[], [], []], 
              [[], [''],['A'], [], []],
@@ -185,6 +186,9 @@ Automata = [[['A'], [''],[], [], []],
              [[], [],[], [], ['', 'A']]]
 
 Automata_Accepting = [[[],[0,1,2,3]]]
+
+
+###AUTOMATON REPRESENTING THE SPECIFICATION PHI 2
 
 
 #Automata = [[[''], ['A'], ['C'], [],[],['B'],[]], 

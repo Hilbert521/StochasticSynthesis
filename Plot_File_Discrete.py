@@ -187,11 +187,7 @@ for i in range(len(Upp_Bound)):
         Maybe_States.append(i)
         
 State_Space_Plot_Color(State_Space,Yes_States, No_States, Maybe_States )  
-#
-List_above = []
-for i in range(len(Suboptimality_Factors)):
-    if Suboptimality_Factors[i] > 0.30 :
-        List_above.append(i)
+
 
 
         

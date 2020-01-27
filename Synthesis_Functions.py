@@ -81,9 +81,9 @@ w2_up = mu2 + Semi_Width_2
 w2_low = mu2 - Semi_Width_2
 Initial_Num_Points = 11
 Min_Num_Points = 3
-Count_Cut_Off = 40 #Value iteration algorithm can get stuck in infinite loop due to numerical errors and possible non global solution to optimization problem. This variable prevents this
-Num_Ref = 6 #number of refinement steps for continuous set of inputs
-Num_Ref_Dis = 10
+Count_Cut_Off = 40 #Value iteration algorithm for continuous set of inputs can get stuck in infinite loop due to numerical errors and possible non global solution to optimization problem. This variable prevents this
+Num_Ref = 20 #number of refinement steps for continuous set of inputs
+Num_Ref_Dis = 20 #number of refinement steps for continuous set of inputs
 Lim_Qualitative_Ref = 5
 
 Init_Volume = (U_MAX_1 - U_MIN_1)*(U_MAX_2 - U_MIN_2)
